@@ -1,8 +1,9 @@
 # === EDIT FILE LOCATIONS BELOW ===
 
-# Your todo.txt directory (this should be an absolute path)
+# Your todo.txt directory
 #export TODO_DIR="/Users/gina/Documents/todo"
-export TODO_DIR=$(dirname "$0")
+#export TODO_DIR=$(dirname "$0")
+export TODO_DIR="$HOME/Dropbox/todo"
 
 # Your todo/done/report.txt locations
 export TODO_FILE="$TODO_DIR/todo.txt"
@@ -10,7 +11,7 @@ export DONE_FILE="$TODO_DIR/done.txt"
 export REPORT_FILE="$TODO_DIR/report.txt"
 
 # You can customize your actions directory location
-#export TODO_ACTIONS_DIR="$HOME/.todo.actions.d"
+export TODO_ACTIONS_DIR="$HOME/.todo/.todo.actions.d"
 
 # == EDIT FILE LOCATIONS ABOVE ===
 
@@ -56,6 +57,7 @@ export REPORT_FILE="$TODO_DIR/report.txt"
 # export PRI_C=$LIGHT_BLUE    # color for C priority
 # export PRI_D=...            # define your own
 # export PRI_X=$WHITE         # color unless explicitly defined
+export PRI_W=$LIGHT_PURPLE
 
 # There is highlighting for tasks that have been done,
 # but haven't been archived yet.
@@ -82,3 +84,5 @@ export REPORT_FILE="$TODO_DIR/report.txt"
 # just before the list output is displayed.
 #
 # export TODOTXT_FINAL_FILTER='cat'
+export TODOTXT_FINAL_FILTER='$HOME/.todo/helper/futureTasks.py'
+
