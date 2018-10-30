@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ "$1" = "usage" ]; then
+    echo "    workflow"
+    echo "      Shortcut to show the workflow notes file."
+    echo ""
+    exit 0
+else
+    less $TODO_DIR/workflow.txt
+fi

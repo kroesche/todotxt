@@ -1,0 +1,14 @@
+#!/bin/sh
+if [ "$1" = "usage" ]; then
+    echo "    lsnotes"
+    echo "      List all the text files in todo directory."
+    echo ""
+    exit 0
+else
+    echo ""
+    echo "NOTEBOOKS"
+    echo "========="
+    cd $TODO_DIR
+    ls -1 *.txt
+    echo ""
+fi
